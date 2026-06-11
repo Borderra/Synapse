@@ -1,0 +1,21 @@
+general:
+  prefix: "<aqua>[Synapse]</aqua> "
+  no-permission: "<red>You do not have permission to use that command.</red>"
+  player-only: "<red>Only players can create a Discord link code.</red>"
+  restart-required: "<yellow>Reload requires a server restart in this initial Synapse build.</yellow>"
+command:
+  usage: "<red>Usage: /discord <link|linked></red>"
+link:
+  code: "<aqua>Your Discord linking code is <gold>{code}</gold>. It expires in {minutes} minutes.</aqua>"
+  click: "<aqua>DM this code to the Discord bot, or <green><click:open_url:'{url}'><hover:show_text:'Open the Discord OAuth linking page'>click here</hover></click></green> to link through Discord OAuth.</aqua>"
+  create-failed: "<red>Could not create a Discord link code. Try again later.</red>"
+  success:
+    minecraft: "<green>Your Discord account <gold>{discord}</gold> is now linked to <gold>{minecraft}</gold>.</green>"
+    discord: "Your Discord account is now linked to Minecraft account **{minecraft}** (`{uuid}`)."
+  invalid:
+    discord: "That link code is invalid or expired. Run `/discord link` in-game to create a new one."
+lookup:
+  usage: "<red>Usage: /discord linked <playerName|minecraftUuid|discordId></red>"
+  not-found: "<yellow>No linked account was found for {query}.</yellow>"
+  found: "<aqua>Linked account: Discord <gold>{discord}</gold> <gray><-></gray> Minecraft <gold>{minecraft}</gold> <gray>({uuid})</gray></aqua>"
+  failed: "<red>Could not query linked accounts. Try again later.</red>"

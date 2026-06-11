@@ -1,0 +1,29 @@
+database:
+  host: "127.0.0.1"
+  port: 3306
+  name: "synapse"
+  username: "synapse"
+  password: "${SYNAPSE_DB_PASSWORD}"
+  use_ssl: false
+  table_prefix: "synapse_"
+  pool_size: 5
+  connection_timeout_ms: 10000
+
+discord:
+  token: "${SYNAPSE_DISCORD_TOKEN}"
+  client_id: ""
+  enable_dm_linking: true
+  reply_to_invalid_codes: true
+
+linking:
+  code_length: 6
+  code_ttl_minutes: 15
+  allow_relink: true
+  web_url: "https://example.com/link.php?uuid={uuid}&code={code}&username={username}"
+  cleanup_expired_codes_minutes: 30
+
+notifications:
+  enabled: true
+  poll_interval_seconds: 15
+  batch_size: 25
+  max_attempts: 3

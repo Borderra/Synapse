@@ -1,0 +1,19 @@
+name: Synapse
+version: '${project.version}'
+main: com.borderra.synapse.SynapsePlugin
+api-version: '1.21'
+folia-supported: true
+description: Minecraft and Discord account-linking bridge.
+author: Borderra
+commands:
+  discord:
+    description: Link or inspect Minecraft and Discord account links.
+    usage: /<command> <link|linked>
+    aliases: [synapse]
+permissions:
+  synapse.command.linked:
+    description: Allows querying linked Minecraft and Discord accounts.
+    default: op
+  synapse.command.reload:
+    description: Allows reloading Synapse configuration.
+    default: op

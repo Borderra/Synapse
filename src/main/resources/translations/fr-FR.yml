@@ -1,0 +1,21 @@
+general:
+  prefix: "<aqua>[Synapse]</aqua> "
+  no-permission: "<red>Vous n'avez pas la permission d'utiliser cette commande.</red>"
+  player-only: "<red>Seuls les joueurs peuvent creer un code de liaison Discord.</red>"
+  restart-required: "<yellow>Le rechargement necessite un redemarrage du serveur dans cette version initiale de Synapse.</yellow>"
+command:
+  usage: "<red>Utilisation : /discord <link|linked></red>"
+link:
+  code: "<aqua>Votre code de liaison Discord est <gold>{code}</gold>. Il expire dans {minutes} minutes.</aqua>"
+  click: "<aqua>Envoyez ce code en message prive au bot Discord, ou <green><click:open_url:'{url}'><hover:show_text:'Ouvrir la page de liaison Discord OAuth'>cliquez ici</hover></click></green> pour lier avec Discord OAuth.</aqua>"
+  create-failed: "<red>Impossible de creer un code de liaison Discord. Reessayez plus tard.</red>"
+  success:
+    minecraft: "<green>Votre compte Discord <gold>{discord}</gold> est maintenant lie a <gold>{minecraft}</gold>.</green>"
+    discord: "Votre compte Discord est maintenant lie au compte Minecraft **{minecraft}** (`{uuid}`)."
+  invalid:
+    discord: "Ce code de liaison est invalide ou expire. Executez `/discord link` en jeu pour en creer un nouveau."
+lookup:
+  usage: "<red>Utilisation : /discord linked <nomJoueur|uuidMinecraft|idDiscord></red>"
+  not-found: "<yellow>Aucun compte lie n'a ete trouve pour {query}.</yellow>"
+  found: "<aqua>Compte lie : Discord <gold>{discord}</gold> <gray><-></gray> Minecraft <gold>{minecraft}</gold> <gray>({uuid})</gray></aqua>"
+  failed: "<red>Impossible de rechercher les comptes lies. Reessayez plus tard.</red>"

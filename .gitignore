@@ -1,0 +1,6 @@
+target/
+*.class
+*.log
+.env
+.DS_Store
+.idea/workspace.xml
