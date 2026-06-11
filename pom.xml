@@ -26,6 +26,10 @@
             <id>maven-central</id>
             <url>https://repo.maven.apache.org/maven2/</url>
         </repository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/borderra/BorderraLib</url>
+        </repository>
     </repositories>
 
     <dependencies>

@@ -10,12 +10,17 @@ mvn package
 
 The shaded plugin jar is written to `target/synapse-1.0.0-SNAPSHOT.jar`.
 
-If Maven cannot resolve `com.borderra:borderralib:1.0.0`, install BorderraLib locally first:
+Synapse resolves BorderraLib from GitHub Packages. Local developer machines need a Maven server entry for the `github` repository id:
 
-```bash
-cd /path/to/BorderraLib
-mvn install
+```xml
+<server>
+    <id>github</id>
+    <username>THE_GITHUB_USERNAME</username>
+    <password>THE_TOKEN_WITH_READ_PACKAGES</password>
+</server>
 ```
+
+Do not commit tokens or credentials. The token needs `read:packages` and read access to `Borderra/BorderraLib`.
 
 ## Configuration
 
