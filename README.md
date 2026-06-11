@@ -22,6 +22,15 @@ Synapse resolves BorderraLib from GitHub Packages. Local developer machines need
 
 Do not commit tokens or credentials. The token needs `read:packages` and read access to `Borderra/BorderraLib`.
 
+## CI And Releases
+
+GitHub Actions uses Maven with Java 21.
+
+- `CI` runs `mvn -B verify` on pushes and pull requests to `main`.
+- `Release` runs on tags matching `v*`, sets the Maven version from the tag, runs `mvn -B deploy`, and uploads the built jar to the GitHub release.
+
+Configure an org or repo secret named `GH_PACKAGES_TOKEN`. It must have `read:packages` access for consuming `Borderra/BorderraLib`; tag publishing also needs package write access for this repository.
+
 ## Configuration
 
 `config.yml` intentionally ships with placeholders instead of secrets:
